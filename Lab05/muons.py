@@ -1,5 +1,5 @@
 # Author: Michael Savino
-# Date: 10/1/24
+# Date: 10/3/24
 # Description: A program to generate random capture rates in a 2 dimensional list and record the highest and lowest in the 2d list
 
 MAP_DIMENSIONS = 8

@@ -1,5 +1,5 @@
 # Author: Michael Savino
-# Date: 10/1/24
+# Date: 10/3/24
 # Description: A program to generate temperatures in 3 different cities, then plot them against time
 
 import matplotlib.pyplot as plt
