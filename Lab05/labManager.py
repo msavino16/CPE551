@@ -1,6 +1,7 @@
 # Author: Michael Savino
 # Date: 10/1/24
-# Description: 
+# Description: A lab management program that allows users to store up
+# to 5 items, remove items, view items, or leave 
 
 def dialogue():
 
