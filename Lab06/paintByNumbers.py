@@ -6,7 +6,7 @@
 from pbnFunctions import getFileName, processFile
 def main():
     """
-    General function description
+    Main function for Paint by Numbers Program
     """
 
     filename = getFileName()
