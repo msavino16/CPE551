@@ -6,12 +6,15 @@ class Product():
     '''
     Product Class with 4 variables - name, units, unitprice, and total price
     '''
-    def __init__(self):
+    def __init__(self): #Constructor
         self.__name = ''
         self.__units = ''
         self.__unitPrice = 0
         self.__totalPrice = 0
-        
+
+    '''
+    Accessor Methods
+    '''          
     def getName(self):
         return self.__name
     def getUnits(self):
@@ -21,6 +24,10 @@ class Product():
     def getTotalPrice(self):
         return self.__totalPrice
     
+    
+    '''
+    Mutator Methods
+    '''     
     def setName(self,name):
         self.__name = name
     def setUnits(self,units):
