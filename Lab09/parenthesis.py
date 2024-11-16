@@ -6,7 +6,13 @@
 count = 0
 
 def parenTest(line,position):
-    
+    '''
+    Recursive function to test if parenthesis are balanced
+    :param line: String made up of parenthesis
+    :type line: String
+    :param position:  current position on the parenthesis string
+    :type position: int
+    '''
     global count
     #Base Case
     if position == len(line):
@@ -28,6 +34,10 @@ def parenTest(line,position):
 
 
 def main():
+    
+    '''
+    Main Function
+    '''
     
     line = input("Please enter a series of parenthesis to see if they are balanced: ")
     
