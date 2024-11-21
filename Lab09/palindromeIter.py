@@ -9,7 +9,7 @@ def palinTest(test):
     :param test: the word to be tested
     :type test: String
     '''
-    
+
     length = len(test)
     for i in range(int(length/2)):
         if test[i] != test[length-i-1]:
