@@ -1,8 +1,8 @@
 # Author: Michael Savino
 # Date: 11/22/24
-# Description: Stack Class using Linked List
- 
-class Node(): #Node Class
+# Description: Queue Class using Linked List
+
+class Node: #Node Class
     def __init__(self, data):
         self.__data = data
         self.__next = None
@@ -13,44 +13,51 @@ class Node(): #Node Class
 
     def getNext(self):
         return self.__next
-
+    
     #Mutators
-    def setData(self, data):
+    def setData(self,data):
         self.__data = data
 
-    def setNext(self, next_node):
-        self.__next = next_node
+    def setNext(self, next):
+        self.__next = next
 
 
-class EmptyStackException(Exception): #EmptyStackException Class
+class EmptyQueueException(Exception): #EmptyStackException Class
     def __init__(self, action):
-        message = f"Sorry, the stack is empty and we cannot {action}!"
+        message = f"Sorry, the queue is empty and we cannot {action}!"
         super().__init__(message)
 
 
-class Stack(): #Stack Class
+class Queue: #Stack Class
     def __init__(self):
         self._head = None
+        self._tail = None
 
-    def push(self, data):
-        node = Node(data)
-        node.setNext(self._head)
-        self._head = node
+    def enqueue(self, data):
+        new_node = Node(data)
+        if self._tail is None:
+            self._head = new_node
+        else:
+            self._tail.setNext(new_node)
+        self._tail = new_node
 
-    def pop(self):
+    def dequeue(self):
         if self._head is None:
-            raise EmptyStackException("pop")
+            raise EmptyQueueException("dequeue")
         data = self._head.getData()
         self._head = self._head.getNext()
+        if self._head is None:
+            self._tail = None
         return data
 
     def peek(self):
         if self._head is None:
-            raise EmptyStackException("peek")
+            raise EmptyQueueException("peek")
         return self._head.getData()
 
     def clear(self):
         self._head = None
+        self._tail = None
 
     def __str__(self):
         elements = []
